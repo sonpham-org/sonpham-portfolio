@@ -1,0 +1,60 @@
+---
+title: "Building a Multi-Project Portfolio with Railway"
+date: "2026-01-30"
+excerpt: "How I'm architecting a portfolio site that hosts multiple projects using Railway's multi-service deployment and custom domains."
+tags: ["web development", "Railway", "Next.js", "deployment"]
+---
+
+# Building a Multi-Project Portfolio with Railway
+
+Today I'm tackling an interesting architectural challenge: building a portfolio website that seamlessly hosts multiple independent projects.
+
+## The Vision
+
+I want **sonpham.net** to serve as a central hub with:
+
+- Main portfolio and blog
+- Individual project deployments (ARC Creator, Wealth of Agents)
+- Each project running independently
+- Unified navigation experience
+
+## The Architecture
+
+Railway makes this surprisingly elegant with subdomain routing:
+
+```
+sonpham.net → Main portfolio
+arc.sonpham.net → ARC Creator  
+agents.sonpham.net → Wealth of Agents
+```
+
+### Why This Works
+
+Each project:
+- Lives in its own GitHub repository
+- Deploys as a separate Railway service
+- Scales independently
+- Maintains its own CI/CD pipeline
+
+## The Alternative: Monorepo
+
+I considered a monorepo with tools like Turborepo, but decided against it because:
+
+- Projects have different tech stacks
+- Independent deployment cycles are valuable
+- Easier to open-source individual projects
+- Better separation of concerns
+
+## Implementation Steps
+
+1. **Setup Railway project** with multiple services
+2. **Configure DNS** at domain registrar
+3. **Deploy each service** from its GitHub repo
+4. **Link custom domains** in Railway
+5. **Test and iterate**
+
+## What I Learned
+
+Railway's multi-service architecture is perfect for this use case. The ability to connect different repos to different services while maintaining a unified domain structure is exactly what I needed.
+
+Next up: Adding the blog system and integrating ads for sustainability.
