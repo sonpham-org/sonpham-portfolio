@@ -21,27 +21,6 @@ export default function ProjectsPage() {
       tags: ["Python", "Simulation", "Economics", "AI", "Visualization"],
       isExternal: true,
     },
-    {
-      title: "Cancer Prediction System",
-      description: "Machine learning system for cancer prediction using advanced imaging and feature analysis. Production-ready ML pipeline with automated training.",
-      url: "/projects/cancer-prediction",
-      tags: ["Python", "ML", "Healthcare", "Docker", "BigQuery"],
-      isExternal: false,
-    },
-    {
-      title: "ARC-AGI Solver",
-      description: "Multi-agent system for solving Abstract and Reasoning Corpus challenges using LangGraph and advanced reasoning techniques.",
-      url: "/projects/arc-solver",
-      tags: ["Python", "AI", "LangGraph", "Problem Solving"],
-      isExternal: false,
-    },
-    {
-      title: "Tiny Recursive Models",
-      description: "Research on compact recursive neural architectures for efficient deep learning. Exploring model compression and recursive patterns.",
-      url: "/projects/tiny-recursive",
-      tags: ["Python", "Deep Learning", "Research", "PyTorch"],
-      isExternal: false,
-    },
   ];
 
   return (
